@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}DoosraGPT Marketplace{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'marketplace/css/marketplace.css' %}">
+</head>
+<body>
+    <header>
+        <!-- Navbar content -->
+        {% block navbar %}
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <!-- Add more navbar links as needed -->
+            </ul>
+        </nav>
+        {% endblock %}
+    </header>
+
+    <main>
+        <!-- Main content -->
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+        {% block footer %}
+        <p>&copy; 2024 DoosraGPT Marketplace. All rights reserved.</p>
+        {% endblock %}
+    </footer>
+
+    <!-- Include any JavaScript files here -->
+    <script src="{% static 'marketplace/js/marketplace.js' %}"></script>
+</body>
+</html>

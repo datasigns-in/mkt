@@ -1,0 +1,40 @@
+<!-- marketplace_home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoosraGPT Marketplace</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div>
+        <h1>Welcome to DoosraGPT Marketplace</h1>
+        <h2>Available ML Models</h2>
+        <ul>
+            <!-- Loop through all ML models -->
+            {% for model in ml_models %}
+            <li>
+                <!-- Display basic details of the ML model -->
+                <h3>{{ model.name }}</h3>
+                <p>Developer: {{ model.developer }}</p>
+                <p>Description: {{ model.description }}</p>
+                <p>Price: ${{ model.price }}</p>
+                <p>Rating: {{ model.rating }}</p>
+                <!-- Add more details or links as needed -->
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
